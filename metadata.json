@@ -1,0 +1,6 @@
+{
+  "name": "Lumière | لوميير - Modern Women's Fashion Egypt",
+  "description": "High-end women's fashion e-commerce boutique in Egypt featuring contemporary dresses, abayas, co-ords, and accessories with instant WhatsApp checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

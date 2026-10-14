@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>لوميير | أزياء نسائية فاخرة في مصر - Lumière</title>
+  <meta name="description" content="أرقى الأزياء النسائية والعبايات والفساتين المعاصرة المصممة بأعلى جودة للمرأة في مصر مع شحن سريع وتأكيد فوري عبر واتساب." />
+  <meta name="theme-color" content="#7A2E3F" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="لوميير | أزياء نسائية فاخرة في مصر - Lumière" />
+  <meta property="og:description" content="تشكيلة حصرية من أرقى الفساتين، العبايات، والأطقم النسائية في مصر مع خدمة المعاينة عند الاستلام." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:locale" content="ar_EG" />
+  <meta property="og:site_name" content="Lumière Egypt" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="لوميير | Lumière Egypt" />
+  <meta name="twitter:description" content="أناقة معاصرة وتصاميم نسائية محتشمة وراقية للمرأة المصرية." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon Monogram (Rosewood & Gold SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237A2E3F'/%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23C9A66B' stroke-width='2'/%3E%3Ctext x='50' y='64' font-family='Georgia,serif' font-size='42' font-weight='bold' fill='%23FBF6F1' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts Preconnect & Display=Swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Reem+Kufi:wght@500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Lumière | لوميير",
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1200&q=80",
+    "description": "High-end women's fashion boutique in Egypt.",
+    "telephone": "+201017238942",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "EG",
+      "addressRegion": "Cairo"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Dismissible) -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="container">
+      <div class="announcement-text" data-i18n="announcement">
+        ✨ شحن مجاني لجميع محافظات مصر للطلبات فوق 1,500 ج.م | كود ترحيبي: LUMIERE10
+      </div>
+      <button class="announcement-close" id="announcement-close" type="button" aria-label="Close Announcement">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo" aria-label="Lumière Home">
+          <span class="brand-name" data-i18n="storeName">لوميير</span>
+          <span class="brand-sub">HAUTE COLLECTION</span>
+        </a>
+
+        <!-- Desktop Search Bar -->
+        <div class="header-search">
+          <div class="search-input-wrap">
+            <span class="search-icon-inside">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </span>
+            <input type="search" 
+                   class="search-input" 
+                   id="header-search-input" 
+                   data-i18n-placeholder="searchPlaceholder" 
+                   placeholder="ابحثي عن فساتين، عبايات، أطقم..." 
+                   autocomplete="off" />
+            <button class="search-clear-btn" id="search-clear-btn" type="button" aria-label="Clear Search">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          
+          <!-- Mobile Search Trigger -->
+          <button class="header-btn mobile-search-trigger" id="mobile-search-trigger" type="button" aria-label="Search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+
+          <!-- Language Toggle (AR / EN) -->
+          <button class="lang-toggle-btn" id="lang-toggle-btn" type="button" aria-label="Switch Language">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            <span id="lang-toggle-text">English</span>
+          </button>
+
+          <!-- Favorites Trigger -->
+          <button class="header-btn" id="favorites-trigger-btn" type="button" aria-label="Favorites">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+            <span class="badge-count" id="favorites-count-badge">0</span>
+          </button>
+
+          <!-- Cart Trigger -->
+          <button class="header-btn" id="cart-trigger-btn" type="button" aria-label="Shopping Bag">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="badge-count" id="cart-count-badge">0</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Mobile Search Expandable Bar -->
+      <div class="mobile-search-bar" id="mobile-search-bar">
+        <div class="search-input-wrap">
+          <span class="search-icon-inside">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </span>
+          <input type="search" 
+                 class="search-input" 
+                 id="mobile-search-input" 
+                 data-i18n-placeholder="searchPlaceholder" 
+                 placeholder="ابحثي عن فساتين، عبايات، أطقم..." />
+          <button class="search-clear-btn" id="mobile-search-clear-btn" type="button" aria-label="Clear Search">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section: Editorial Boutique Layout -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content fade-reveal">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span data-i18n="newSeasonBadge">تشكيلة الموسم الجديدة</span>
+            </div>
+            <h1 class="hero-title">
+              أناقة تفيض أنوثةً <br />
+              <span>بتفاصيل مفعمة بالحياة</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="tagline">
+              أناقة معاصرة للمرأة العصرية
+            </p>
+            <div class="hero-actions">
+              <a href="#catalog" class="btn-primary" data-i18n="shopCollectionCTA">
+                تسوقي التشكيلة
+              </a>
+              <a href="#best-sellers" class="btn-secondary" data-i18n="bestSellersCTA">
+                الأكثر مبيعاً
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual fade-reveal">
+            <div class="hero-arch-frame">
+              <img class="hero-arch-img" 
+                   src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85" 
+                   alt="Lumière New Season Collection" 
+                   width="420" 
+                   height="560" 
+                   decoding="async" />
+            </div>
+
+            <div class="hero-floating-card">
+              <div class="hero-floating-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div>
+                <div class="hero-floating-title">100% تصاميم أصلية</div>
+                <div class="hero-floating-sub">أقمشة مصرية وكورية فاخرة</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Horizontal Chips -->
+    <section class="categories-bar-section">
+      <div class="container">
+        <div class="category-scroll-container" id="category-chips-list">
+          <!-- Dynamically generated chips -->
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals Showcase -->
+    <section class="section-curated" id="new-arrivals">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title" data-i18n="newArrivalsTitle">وصل حديثاً</h2>
+            <p class="section-subtitle" data-i18n="newArrivalsSubtitle">أحدث تصاميم هذا الأسبوع المختارة بعناية لأناقتك</p>
+          </div>
+          <a href="#catalog" class="section-link" data-i18n="shopCollectionCTA">
+            <span>عرض الكل</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+        <div class="curated-scroll" id="new-arrivals-list">
+          <!-- Dynamically populated cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers Showcase -->
+    <section class="section-curated alt-bg" id="best-sellers">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title" data-i18n="bestSellersTitle">الأكثر طلباً ومبيعاً</h2>
+            <p class="section-subtitle" data-i18n="bestSellersSubtitle">القطع المفضلة لدى عميلاتنا في جميع محافظات مصر</p>
+          </div>
+          <a href="#catalog" class="section-link" data-i18n="shopCollectionCTA">
+            <span>عرض الكل</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+        <div class="curated-scroll" id="best-sellers-list">
+          <!-- Dynamically populated cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Catalog with Filters & Search -->
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        
+        <div class="section-header" style="margin-bottom: 16px;">
+          <div>
+            <h2 class="section-title" data-i18n="catalogTitle">جميع القطع والتصاميم</h2>
+            <p class="section-subtitle" data-i18n="catalogSubtitle">استكشفي تشكيلتنا الكاملة واختاري ما يناسب ذوقك الرفيع</p>
+          </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <button class="filter-trigger-btn" id="filter-trigger-btn" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              <span data-i18n="filterBtn">تصفية المنتجات</span>
+              <span class="filter-active-pill" id="filter-active-pill">0</span>
+            </button>
+            <span class="catalog-count" id="catalog-count-label">عرض المنتجات...</span>
+          </div>
+
+          <div class="toolbar-right">
+            <div class="sort-select-wrap">
+              <label for="sort-select" class="sort-label" data-i18n="sortLabel">ترتيب حسب:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="newest" data-i18n="sortNewest">الأحدث أولاً</option>
+                <option value="priceAsc" data-i18n="sortPriceAsc">السعر: من الأقل للأعلى</option>
+                <option value="priceDesc" data-i18n="sortPriceDesc">السعر: من الأعلى للأقل</option>
+                <option value="bestSeller" data-i18n="sortBestSeller">الأكثر مبيعاً والتقييم</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Tags -->
+        <div class="active-filters-bar" id="active-filters-container"></div>
+
+        <!-- Catalog Product Grid -->
+        <div class="product-grid" id="catalog-grid">
+          <!-- Dynamically rendered cards -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="catalog-empty-state" id="catalog-empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 8l6 6"/></svg>
+          </div>
+          <h3 class="empty-state-title" data-i18n="noProductsFound">لم نجد قطعاً تطابق معايير الفلترة</h3>
+          <p class="empty-state-desc" data-i18n="noProductsAdvice">جربي تغيير خيارات التصفية أو مسح كلمات البحث.</p>
+          <button class="btn-secondary" type="button" onclick="LumiereApp.resetAllFilters()" data-i18n="resetFilters">
+            إعادة ضبط الفلاتر
+          </button>
+        </div>
+
+        <!-- Pagination / Load More -->
+        <div class="pagination-wrap">
+          <button class="btn-load-more" id="load-more-btn" type="button" data-i18n="loadMore">
+            عرض المزيد من القطع
+          </button>
+          <p class="all-loaded-text" id="all-loaded-msg" style="display: none;" data-i18n="allLoaded">
+            لقد شاهدتِ جميع القطع المتوفرة
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Promo Banner: Free Shipping Offer -->
+    <section class="promo-banner-section">
+      <div class="container">
+        <div class="promo-banner-card fade-reveal">
+          <div class="promo-badge-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="7" cy="18" r="2"/><path d="M15 18H9"/><circle cx="17" cy="18" r="2"/><path d="M16 8h4l3 3v5h-2"/></svg>
+            <span>عرض حصري</span>
+          </div>
+          <h2 class="promo-title" data-i18n="promoBannerTitle">
+            شحن مجاني لكل مصر عند الشراء بمبلغ 1,500 ج.م فأكثر
+          </h2>
+          <p class="promo-desc" data-i18n="promoBannerDesc">
+            اختاري تشكيلة من فساتينك وعباياتك المفضلة واستمتعي بالتوصيل المجاني إلى باب منزلك مع إمكانية المعاينة قبل الدفع.
+          </p>
+          <a href="#catalog" class="btn-promo-cta" data-i18n="promoBannerCTA">
+            تسوقي العرض الآن
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-grid">
+          
+          <div class="trust-card fade-reveal">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="7" cy="18" r="2"/><path d="M15 18H9"/><circle cx="17" cy="18" r="2"/><path d="M16 8h4l3 3v5h-2"/></svg>
+            </div>
+            <h3 class="trust-title" data-i18n="badge1Title">توصيل سريع لجميع المحافظات</h3>
+            <p class="trust-desc" data-i18n="badge1Desc">خلال 24-48 ساعة للقاهرة والجيزة وخلال 2-4 أيام لباقي محافظات مصر.</p>
+          </div>
+
+          <div class="trust-card fade-reveal">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="trust-title" data-i18n="badge2Title">معاينة القطع عند الاستلام</h3>
+            <p class="trust-desc" data-i18n="badge2Desc">يمكنكِ فحص الخامات والتأكد من الجودة والمقاس أمام مندوب الشحن بكل راحة وثقة.</p>
+          </div>
+
+          <div class="trust-card fade-reveal">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="trust-title" data-i18n="badge3Title">أقمشة فاخرة وتشطيب مثالي</h3>
+            <p class="trust-desc" data-i18n="badge3Desc">نختار بعناية فائقة أجود أنواع الكريب والكتان والقطن المصري لخامات تدوم طويلاً.</p>
+          </div>
+
+          <div class="trust-card fade-reveal">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <h3 class="trust-title" data-i18n="badge4Title">خدمة عملاء مباشرة عبر واتساب</h3>
+            <p class="trust-desc" data-i18n="badge4Desc">فريقنا متواجد يومياً لمساعدتكِ في اختيار المقاس وتنسيق الإطلالات ومتابعة الشحنة.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-name" data-i18n="storeName">لوميير</span>
+            <span class="brand-sub">HAUTE COLLECTION</span>
+          </div>
+          <p class="footer-text" data-i18n="footerAboutText">
+            علامة أزياء مصرية معاصرة مكرسة لتمكين المرأة العربية من خلال تصاميم تجمع بين الأناقة الراقية والاحتشام العصري بأعلى معايير الجودة.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerLinksTitle">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" data-i18n="storeName">الرئيسية</a></li>
+            <li><a href="#new-arrivals" data-i18n="newArrivalsTitle">وصل حديثاً</a></li>
+            <li><a href="#best-sellers" data-i18n="bestSellersTitle">الأكثر مبيعاً</a></li>
+            <li><a href="#catalog" data-i18n="catalogTitle">جميع القطع</a></li>
+            <li><a href="#" class="size-guide-open" data-i18n="sizeGuideLink">دليل المقاسات 📏</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerCareTitle">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="size-guide-open" data-i18n="shippingPolicyLink">سياسة الشحن والتوصيل</a></li>
+            <li><a href="#" class="size-guide-open" data-i18n="returnsPolicyLink">سياسة الاستبدال والمعاينة</a></li>
+            <li><a href="#" class="size-guide-open" data-i18n="faqLink">الأسئلة الشائعة</a></li>
+            <li><a href="#" class="size-guide-open" data-i18n="privacyPolicyLink">سياسة الخصوصية</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footerContactTitle">تواصلي معنا</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>01017238942</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>يومياً من ١٠ ص إلى ١١ م</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <span>@lumiere.egypt</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footerRights">جميع الحقوق محفوظة لمتجر لوميير للأزياء النسائية © 2026</div>
+        <div class="footer-payments-icons">
+          <span class="payment-badge">الدفع عند الاستلام COD</span>
+          <span class="payment-badge">معاينة قبل الدفع</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Direct Support Button -->
+  <button class="floating-whatsapp-btn" id="floating-whatsapp-btn" type="button" aria-label="WhatsApp Support">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.63c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+    </svg>
+    <span class="floating-whatsapp-tooltip" data-i18n="floatingWhatsappTooltip">محادثة مباشرة عبر واتساب</span>
+  </button>
+
+  <!-- =========================================================================
+       MODALS & DRAWERS
+       ========================================================================= -->
+
+  <!-- Drawer Overlay (Backdrop for Cart & Wishlist) -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Slide-in Cart Drawer -->
+  <aside class="drawer-panel" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="drawer-header">
+      <h3 class="drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span data-i18n="cartTitle">سلة المشتريات</span>
+      </h3>
+      <button class="modal-close-btn" id="cart-drawer-close" type="button" aria-label="Close Cart">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="shipping-progress-widget" id="cart-shipping-progress">
+      <div class="shipping-progress-msg" id="shipping-progress-text">
+        أضيفي المزيد للحصول على شحن مجاني
+      </div>
+      <div class="shipping-progress-bar-track">
+        <div class="shipping-progress-bar-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Body -->
+    <div class="drawer-body" id="cart-items-list">
+      <!-- Dynamically filled with cart items -->
+    </div>
+
+    <!-- Empty Cart State -->
+    <div class="catalog-empty-state" id="cart-empty-state" style="display: none; margin: auto; border: none; background: transparent;">
+      <div class="empty-state-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </div>
+      <h4 class="empty-state-title" data-i18n="emptyCartTitle">سلتك فارغة حالياً</h4>
+      <p class="empty-state-desc" data-i18n="emptyCartDesc">استكشفي مجموعتنا الأنيقة وأضيفي قطعك المفضلة</p>
+      <button class="btn-primary" type="button" onclick="LumiereApp.closeDrawers()" data-i18n="continueShopping">
+        متابعة التسوق
+      </button>
+    </div>
+
+    <!-- Cart Footer with Totals & Checkout CTA -->
+    <div class="drawer-footer">
+      <div class="drawer-summary-row">
+        <span data-i18n="subtotal">إجمالي المنتجات:</span>
+        <span id="cart-subtotal-val">0 ج.م</span>
+      </div>
+      <div class="drawer-summary-row">
+        <span data-i18n="shippingEstimate">الشحن:</span>
+        <span id="cart-shipping-val" data-i18n="shippingAtCheckout">يُحسب عند إدخال المحافظة</span>
+      </div>
+      <div class="drawer-summary-row total-row">
+        <span data-i18n="cartTotal">الإجمالي:</span>
+        <span class="total-amount" id="cart-total-val">0 ج.م</span>
+      </div>
+      <button class="btn-primary" id="cart-checkout-btn" style="width: 100%;" type="button" data-i18n="proceedToCheckout">
+        إتمام الطلب الآن
+      </button>
+    </div>
+  </aside>
+
+  <!-- Slide-in Favorites Drawer -->
+  <aside class="drawer-panel" id="favorites-drawer" aria-label="Saved Favorites">
+    <div class="drawer-header">
+      <h3 class="drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <span data-i18n="favoritesTitle">المفضلة</span>
+      </h3>
+      <button class="modal-close-btn" id="favorites-drawer-close" type="button" aria-label="Close Favorites">✕</button>
+    </div>
+
+    <div class="drawer-body" id="favorites-items-list">
+      <!-- Dynamically filled with favorites items -->
+    </div>
+
+    <div class="catalog-empty-state" id="favorites-empty-state" style="display: none; margin: auto; border: none; background: transparent;">
+      <div class="empty-state-icon" style="color: #E63946; background-color: #FDF4F5;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      </div>
+      <h4 class="empty-state-title" data-i18n="emptyFavoritesTitle">لا توجد منتجات في المفضلة بعد</h4>
+      <p class="empty-state-desc" data-i18n="emptyFavoritesDesc">احفظي القطع التي تعجبك بالضغط على أيقونة القلب للرجوع إليها في أي وقت</p>
+      <button class="btn-primary" type="button" onclick="LumiereApp.closeDrawers()" data-i18n="continueShopping">
+        متابعة التسوق
+      </button>
+    </div>
+  </aside>
+
+  <!-- Product Detail / Quick View Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <span class="pdetail-category" id="pdetail-category-label">Category</span>
+        <button class="modal-close-btn" id="product-modal-close" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="pdetail-layout">
+          <!-- Gallery -->
+          <div class="pdetail-gallery">
+            <div class="pdetail-main-img-wrap">
+              <img id="pdetail-main-image" class="pdetail-main-img" src="" alt="" />
+            </div>
+            <div class="pdetail-thumbs" id="pdetail-thumbnails"></div>
+          </div>
+          <!-- Info & Selectors -->
+          <div class="pdetail-meta">
+            <div class="pdetail-header-info">
+              <h2 class="pdetail-title" id="pdetail-title-text">Product Title</h2>
+              <div class="pdetail-rating-row">
+                <span class="stars-gold">★★★★★</span>
+                <span id="pdetail-reviews-count">(24 reviews)</span>
+              </div>
+            </div>
+
+            <div class="pdetail-price-row">
+              <span class="pdetail-price-main" id="pdetail-price-text">0 ج.م</span>
+              <span class="price-old" id="pdetail-oldprice-text">0 ج.م</span>
+            </div>
+
+            <p class="pdetail-desc" id="pdetail-desc-text">Description</p>
+
+            <!-- Color Options -->
+            <div class="pdetail-option-group">
+              <div class="pdetail-option-header">
+                <span>
+                  <span data-i18n="colorLabel">اللون:</span>
+                  <span class="selected-val-label" id="pdetail-selected-color-name"></span>
+                </span>
+              </div>
+              <div class="color-swatches-interactive" id="pdetail-colors-list"></div>
+            </div>
+
+            <!-- Size Options -->
+            <div class="pdetail-option-group">
+              <div class="pdetail-option-header">
+                <span>
+                  <span data-i18n="sizeLabel">المقاس:</span>
+                  <span class="selected-val-label" id="pdetail-selected-size-name"></span>
+                </span>
+                <button type="button" class="size-guide-trigger size-guide-open" data-i18n="sizeGuideLink">
+                  دليل المقاسات 📏
+                </button>
+              </div>
+              <div class="size-chips-interactive" id="pdetail-sizes-list"></div>
+            </div>
+
+            <!-- Quantity & Add to Cart -->
+            <div class="pdetail-option-group" style="margin-top: 8px;">
+              <div class="qty-stepper-wrap">
+                <div class="qty-stepper">
+                  <button type="button" class="qty-btn" id="pdetail-qty-minus">-</button>
+                  <input type="text" class="qty-input" id="pdetail-qty-input" value="1" readonly />
+                  <button type="button" class="qty-btn" id="pdetail-qty-plus">+</button>
+                </div>
+                <button class="btn-primary" id="pdetail-add-cart-btn" style="flex: 1;" type="button" data-i18n="addToCart">
+                  أضيفي إلى السلة
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Filter Modal (Bottom Sheet) -->
+  <div class="modal-overlay" id="filter-modal">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="filtersHeading">خيارات التصفية</h3>
+        <button class="modal-close-btn" id="filter-modal-close" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Category Filter -->
+        <div class="filter-drawer-section">
+          <h4 class="filter-drawer-heading" data-i18n="filterCategory">الفئة</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;" id="filter-categories-container"></div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-drawer-section">
+          <h4 class="filter-drawer-heading" data-i18n="filterPrice">نطاق السعر (ج.م)</h4>
+          <div class="price-range-inputs">
+            <input type="number" class="price-range-input" id="filter-min-price" placeholder="من 0" min="0" step="50" />
+            <span>—</span>
+            <input type="number" class="price-range-input" id="filter-max-price" placeholder="إلى 2500" min="0" step="50" />
+          </div>
+        </div>
+
+        <!-- In-Stock Only -->
+        <div class="filter-drawer-section">
+          <label class="checkbox-group">
+            <input type="checkbox" id="filter-stock-only" style="display: none;" />
+            <span class="checkbox-custom">✓</span>
+            <span class="form-label" style="cursor: pointer;" data-i18n="filterStock">المتوفر في المخزن فقط</span>
+          </label>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="reset-filters-btn" style="flex: 1;" type="button" data-i18n="resetFilters">
+          إعادة ضبط
+        </button>
+        <button class="btn-primary" id="apply-filters-btn" style="flex: 1.5;" type="button" data-i18n="applyFilters">
+          تطبيق الفلترة
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Size Guide Modal -->
+  <div class="modal-overlay" id="size-guide-modal">
+    <div class="modal-sheet" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="sizeGuideTitle">دليل المقاسات لوميير</h3>
+        <button class="modal-close-btn" id="size-guide-close" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 14px;" data-i18n="sizeGuideIntro">
+          جميع القياسات الموضحة أدناه بالسنتيمتر (سم). نوصي باستخدام شريط قياس مرن للتأكد من المقاس المثالي.
+        </p>
+
+        <div class="size-table-wrap">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th data-i18n="sizeCol">المقاس</th>
+                <th data-i18n="bustCol">محيط الصدر (سم)</th>
+                <th data-i18n="waistCol">محيط الخصر (سم)</th>
+                <th data-i18n="hipsCol">محيط الأرداف (سم)</th>
+              </tr>
+            </thead>
+            <tbody id="size-guide-table-body">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="size-tip-box" data-i18n="sizeGuideTip">
+          💡 نصيحة لوميير: إذا كانت قياساتك تقع بين مقاسين، نوصي باختيار المقاس الأكبر لضمان راحة وانسيابية تامة في اللبس والمظهر.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" style="width: 100%;" type="button" onclick="LumiereApp.closeModal('sizeGuideModal')" data-i18n="closeModal">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Step Checkout Modal (Fullscreen Mobile / Bottom Sheet) -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-sheet">
+      
+      <!-- Checkout Header -->
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="checkoutTitle">إتمام الطلب</h3>
+        <button class="modal-close-btn" id="checkout-modal-close" type="button">✕</button>
+      </div>
+
+      <!-- Stepper Indicator -->
+      <div class="checkout-stepper" id="checkout-stepper-bar">
+        <div class="step-node active" id="step-node-1">
+          <div class="step-circle">1</div>
+          <span class="step-label" data-i18n="stepLabel1">الشحن</span>
+        </div>
+        <div class="stepper-line" id="step-line-1"></div>
+        <div class="step-node" id="step-node-2">
+          <div class="step-circle">2</div>
+          <span class="step-label" data-i18n="stepLabel2">الدفع</span>
+        </div>
+        <div class="stepper-line" id="step-line-2"></div>
+        <div class="step-node" id="step-node-3">
+          <div class="step-circle">3</div>
+          <span class="step-label" data-i18n="stepLabel3">المراجعة</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Customer & Address Details -->
+      <div class="modal-body" id="checkout-step-1">
+        <div class="form-grid">
+          
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-fullname" data-i18n="fullNameLabel">الاسم بالكامل *</label>
+            <input type="text" class="form-control" id="checkout-fullname" data-i18n-placeholder="fullNamePlaceholder" placeholder="مثال: مريم أحمد محمود" autocomplete="name" />
+            <span class="form-feedback" id="val-name-feedback" data-i18n="valNameRequired">يرجى كتابة الاسم ثنائياً على الأقل.</span>
+          </div>
+
+          <!-- Mobile Number -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-mobile" data-i18n="mobileLabel">رقم الموبايل * (للتوصيل)</label>
+            <input type="tel" inputmode="tel" class="form-control" id="checkout-mobile" data-i18n-placeholder="mobilePlaceholder" placeholder="مثال: 01012345678" autocomplete="tel" maxlength="11" />
+            <span class="form-feedback" id="val-mobile-feedback" data-i18n="valMobileInvalid">يرجى إدخال رقم موبايل مصري صحيح يبدأ بـ 01 (11 رقماً).</span>
+          </div>
+
+          <!-- Same as Mobile Checkbox -->
+          <div class="form-group">
+            <label class="checkbox-group">
+              <input type="checkbox" id="checkout-same-as-mobile" checked style="display: none;" />
+              <span class="checkbox-custom">✓</span>
+              <span class="form-label" style="cursor: pointer;" data-i18n="sameAsMobile">نفس رقم الموبايل للتواصل عبر واتساب</span>
+            </label>
+          </div>
+
+          <!-- WhatsApp Number (Conditional) -->
+          <div class="form-group" id="checkout-whatsapp-group" style="display: none;">
+            <label class="form-label" for="checkout-whatsapp" data-i18n="whatsappLabel">رقم الواتساب (اختياري)</label>
+            <input type="tel" inputmode="tel" class="form-control" id="checkout-whatsapp" data-i18n-placeholder="whatsappPlaceholder" placeholder="01xxxxxxxxx" maxlength="11" />
+            <span class="form-feedback" id="val-whatsapp-feedback" data-i18n="valWhatsappInvalid">رقم الواتساب غير صحيح.</span>
+          </div>
+
+          <!-- Governorate Select -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-gov-select" data-i18n="governorateLabel">المحافظة *</label>
+            <select class="form-control" id="checkout-gov-select">
+              <!-- Dynamically populated 27 governorates -->
+            </select>
+            <span class="form-feedback" id="val-gov-feedback" data-i18n="valGovRequired">يرجى اختيار المحافظة لحساب تكلفة الشحن.</span>
+          </div>
+
+          <!-- Live Shipping Calculated Card -->
+          <div class="shipping-calc-card" id="checkout-shipping-calc-card" style="display: none;">
+            <div class="shipping-calc-text">
+              <span data-i18n="shippingEstimate">الشحن:</span>
+              <strong id="checkout-shipping-calc-val">50 ج.م</strong>
+              <div style="font-size: 0.76rem; color: var(--text-secondary);" id="checkout-shipping-calc-days">خلال 1-2 أيام عمل</div>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--gold-hover); font-weight: 600;">
+              ✓ توصيل لباب المنزل
+            </div>
+          </div>
+
+          <!-- City / District -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-city" data-i18n="cityLabel">المدينة / المركز / الحي *</label>
+            <input type="text" class="form-control" id="checkout-city" data-i18n-placeholder="cityPlaceholder" placeholder="مثال: المعادي / الشيخ زايد / سموحة" />
+            <span class="form-feedback" id="val-city-feedback" data-i18n="valCityRequired">يرجى تحديد المدينة أو الحي.</span>
+          </div>
+
+          <!-- Detailed Address -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-address" data-i18n="addressLabel">العنوان بالتفصيل *</label>
+            <input type="text" class="form-control" id="checkout-address" data-i18n-placeholder="addressPlaceholder" placeholder="مثال: شارع 9، عمارة 14، الدور الثالث، شقة 6" autocomplete="street-address" />
+            <span class="form-feedback" id="val-address-feedback" data-i18n="valAddressRequired">يرجى كتابة العنوان التفصيلي لتسهيل وصول المندوب.</span>
+          </div>
+
+          <!-- Landmark -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-landmark" data-i18n="landmarkLabel">علامة مميزة قريبة (اختياري)</label>
+            <input type="text" class="form-control" id="checkout-landmark" data-i18n-placeholder="landmarkPlaceholder" placeholder="مثال: بجوار صيدلية العزبي" />
+          </div>
+
+          <!-- Delivery Notes -->
+          <div class="form-group">
+            <label class="form-label" for="checkout-notes" data-i18n="notesLabel">ملاحظات للتوصيل (اختياري)</label>
+            <textarea class="form-control" id="checkout-notes" rows="2" data-i18n-placeholder="notesPlaceholder" placeholder="مثال: يرجى الاتصال قبل الوصول بساعة"></textarea>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Step 1 Footer -->
+      <div class="modal-footer" id="checkout-step1-footer">
+        <button class="btn-primary" id="checkout-step1-next" style="width: 100%;" type="button" data-i18n="nextBtn">
+          المتابعة لاختيار طريقة الدفع
+        </button>
+      </div>
+
+      <!-- Step 2: Payment Method Selection -->
+      <div class="modal-body" id="checkout-step-2" style="display: none;">
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;" data-i18n="paymentHeading">
+          اختاري طريقة الدفع المفضلة
+        </h4>
+
+        <div class="payment-methods-grid">
+          
+          <!-- 1. Cash on Delivery (COD) -> ACTIVE & SELECTED -->
+          <label class="payment-card selected" for="pay-cod">
+            <input type="radio" class="payment-radio" id="pay-cod" name="payment-method" value="cod" checked />
+            <div class="payment-card-body">
+              <div class="payment-card-title-row">
+                <span class="payment-card-title" data-i18n="paymentCodTitle">الدفع عند الاستلام (COD)</span>
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem;">مفعل ومتاح</span>
+              </div>
+              <p class="payment-card-desc" data-i18n="paymentCodDesc">
+                ادفعي نقداً لمندوب الشحن عند استلام الطلب ومعاينة القطع براحة وأمان.
+              </p>
+            </div>
+          </label>
+
+          <!-- 2. InstaPay -> DISABLED -->
+          <div class="payment-card disabled">
+            <input type="radio" class="payment-radio" id="pay-instapay" name="payment-method" value="instapay" disabled />
+            <div class="payment-card-body">
+              <div class="payment-card-title-row">
+                <span class="payment-card-title" data-i18n="paymentInstapayTitle">انستا باي (InstaPay)</span>
+                <span class="coming-soon-badge" data-i18n="comingSoonBadge">قريباً</span>
+              </div>
+              <p class="payment-card-desc">الدفع اللحظي عبر تطبيق انستا باي البنكي المصري.</p>
+            </div>
+          </div>
+
+          <!-- 3. Vodafone Cash -> DISABLED -->
+          <div class="payment-card disabled">
+            <input type="radio" class="payment-radio" id="pay-voda" name="payment-method" value="vodafone_cash" disabled />
+            <div class="payment-card-body">
+              <div class="payment-card-title-row">
+                <span class="payment-card-title" data-i18n="paymentVodafoneTitle">فودافون كاش (Vodafone Cash)</span>
+                <span class="coming-soon-badge" data-i18n="comingSoonBadge">قريباً</span>
+              </div>
+              <p class="payment-card-desc">التحويل عبر المحافظ الإلكترونية للهواتف المحمولة في مصر.</p>
+            </div>
+          </div>
+
+          <!-- 4. Credit / Debit Card -> DISABLED -->
+          <div class="payment-card disabled">
+            <input type="radio" class="payment-radio" id="pay-card" name="payment-method" value="card" disabled />
+            <div class="payment-card-body">
+              <div class="payment-card-title-row">
+                <span class="payment-card-title" data-i18n="paymentCardTitle">بطاقة بنكية (فيزا / ماستركارد)</span>
+                <span class="coming-soon-badge" data-i18n="comingSoonBadge">قريباً</span>
+              </div>
+              <p class="payment-card-desc">بوابة دفع إلكتروني آمنة بالبطاقات الائتمانية والخصم المباشر.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Step 2 Footer -->
+      <div class="modal-footer" id="checkout-step2-footer" style="display: none;">
+        <button class="btn-secondary" id="checkout-step2-back" style="flex: 1;" type="button" data-i18n="backBtn">السابق</button>
+        <button class="btn-primary" id="checkout-step2-next" style="flex: 1.5;" type="button" data-i18n="reviewOrderBtn">مراجعة الطلب</button>
+      </div>
+
+      <!-- Step 3: Review & WhatsApp Confirmation -->
+      <div class="modal-body" id="checkout-step-3" style="display: none;">
+        
+        <!-- Customer Info Review -->
+        <div class="review-block">
+          <div class="review-block-header">
+            <span class="review-block-title" data-i18n="customerDetailsSummary">بيانات التوصيل</span>
+            <button class="review-edit-link" id="review-edit-address" type="button" data-i18n="editStep">تعديل</button>
+          </div>
+          <div class="review-info-list">
+            <div class="review-info-row">
+              <span class="review-info-label" data-i18n="nameSummary">الاسم:</span>
+              <span class="review-info-val" id="review-name-val">-</span>
+            </div>
+            <div class="review-info-row">
+              <span class="review-info-label" data-i18n="phoneSummary">الموبايل:</span>
+              <span class="review-info-val" id="review-phone-val">-</span>
+            </div>
+            <div class="review-info-row">
+              <span class="review-info-label" data-i18n="governorateLabel">المحافظة:</span>
+              <span class="review-info-val" id="review-gov-val">-</span>
+            </div>
+            <div class="review-info-row">
+              <span class="review-info-label" data-i18n="addressSummary">العنوان:</span>
+              <span class="review-info-val" id="review-address-val">-</span>
+            </div>
+            <div class="review-info-row">
+              <span class="review-info-label" data-i18n="deliveryEstSummary">مدة التوصيل:</span>
+              <span class="review-info-val" id="review-delivery-val">-</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Review -->
+        <div class="review-block">
+          <div class="review-block-header">
+            <span class="review-block-title" data-i18n="paymentSummary">طريقة الدفع</span>
+            <button class="review-edit-link" id="review-edit-payment" type="button" data-i18n="editStep">تعديل</button>
+          </div>
+          <div class="review-info-row">
+            <span class="review-info-val">💵 الدفع عند الاستلام (COD)</span>
+          </div>
+        </div>
+
+        <!-- Order Items Review -->
+        <div class="review-block">
+          <div class="review-block-header">
+            <span class="review-block-title" data-i18n="orderSummary">ملخص المنتجات</span>
+          </div>
+          <div class="review-items-list" id="review-items-container">
+            <!-- Dynamically populated items -->
+          </div>
+        </div>
+
+        <!-- Totals Review -->
+        <div class="review-block" style="background-color: var(--bg-surface);">
+          <div class="drawer-summary-row">
+            <span data-i18n="subtotal">إجمالي المنتجات:</span>
+            <span id="review-subtotal-val">0 ج.م</span>
+          </div>
+          <div class="drawer-summary-row">
+            <span data-i18n="shippingEstimate">الشحن:</span>
+            <span id="review-shipping-val">50 ج.م</span>
+          </div>
+          <div class="drawer-summary-row total-row">
+            <span>الإجمالي النهائي المستحق:</span>
+            <span class="total-amount" id="review-grandtotal-val">0 ج.م</span>
+          </div>
+        </div>
+
+        <!-- Direct WhatsApp Confirmation Button -->
+        <button class="btn-whatsapp-confirm" id="checkout-confirm-whatsapp-btn" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.63c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+          </svg>
+          <span data-i18n="confirmWhatsappBtn">تأكيد الطلب عبر واتساب</span>
+        </button>
+
+        <p class="whatsapp-redirect-notice" data-i18n="whatsappRedirectNotice">
+          سيتم تحويلك مباشرة إلى محادثة واتساب مع لوميير لإرسال تفاصيل طلبك وتأكيده فوراً.
+        </p>
+
+      </div>
+
+      <!-- Step 3 Footer (Back button) -->
+      <div class="modal-footer" id="checkout-step3-footer" style="display: none;">
+        <button class="btn-secondary" id="checkout-step3-back" style="width: 100%;" type="button" data-i18n="backBtn">
+          السابق
+        </button>
+      </div>
+
+      <!-- Order Success View (Shown after WhatsApp launch) -->
+      <div class="modal-body order-success-view" id="checkout-success-view" style="display: none;">
+        <div class="order-success-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 class="modal-title" style="font-size: 1.5rem; margin-bottom: 8px;" data-i18n="orderSuccessTitle">
+          تم تجهيز طلبك بنجاح! 🌸
+        </h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 480px; margin-bottom: 12px;" data-i18n="orderSuccessDesc">
+          تم إعداد رسالة الطلب تلقائياً، اضغطي على زر "إرسال" في تطبيق واتساب لإتمام التأكيد مع فريق خدمة العملاء.
+        </p>
+        <div class="order-ref-card">
+          <span data-i18n="orderRefLabel">رقم مرجع الطلب:</span>
+          <span id="success-order-ref">LM-XXXXXX</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 380px;">
+          <button class="btn-primary" id="success-open-whatsapp-again" type="button" data-i18n="openWhatsappAgain">
+            فتح محادثة واتساب مرة أخرى
+          </button>
+          <button class="btn-secondary" id="success-finish-btn" type="button" data-i18n="finishAndClear">
+            تم الإرسال - العودة للمتجر
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts: Vanilla JS ES6+ (Module Execution) -->
+  <script type="module" src="/js/data.js"></script>
+  <script type="module" src="/js/app.js"></script>
+
+</body>
+</html>
