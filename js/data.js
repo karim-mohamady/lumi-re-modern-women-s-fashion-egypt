@@ -2412,10 +2412,11 @@ const I18N = {
     deliveryEstSummary: "مدة التوصيل التقديرية:",
     daysLabel: "أيام عمل",
     editStep: "تعديل",
-    confirmWhatsappBtn: "تأكيد الطلب عبر واتساب",
+    checkoutSubmitWhatsapp: "إتمام الطلب وتأكيد عبر واتساب",
+    confirmWhatsappBtn: "إتمام الطلب وتأكيد عبر واتساب",
     whatsappRedirectNotice: "سيتم تحويلك مباشرة إلى محادثة واتساب مع لوميير لإرسال تفاصيل طلبك وتأكيده فوراً.",
     backBtn: "السابق",
-    nextBtn: "المتابعة للدفع",
+    nextBtn: "إتمام الطلب وتأكيد عبر واتساب",
     reviewOrderBtn: "مراجعة الطلب",
     
     // Form Validation Messages
@@ -2611,10 +2612,11 @@ const I18N = {
     deliveryEstSummary: "Estimated Delivery:",
     daysLabel: "business days",
     editStep: "Edit",
-    confirmWhatsappBtn: "Confirm Order via WhatsApp",
+    checkoutSubmitWhatsapp: "Complete Order via WhatsApp",
+    confirmWhatsappBtn: "Complete Order via WhatsApp",
     whatsappRedirectNotice: "You will be directed straight to WhatsApp to confirm and send your order details to Lumière support.",
     backBtn: "Back",
-    nextBtn: "Continue to Payment",
+    nextBtn: "Complete Order via WhatsApp",
     reviewOrderBtn: "Review Order",
     
     // Form Validation Messages
