@@ -718,17 +718,12 @@
       <div class="checkout-stepper" id="checkout-stepper-bar">
         <div class="step-node active" id="step-node-1">
           <div class="step-circle">1</div>
-          <span class="step-label" data-i18n="stepLabel1">الشحن</span>
+          <span class="step-label" data-i18n="stepLabel1">بيانات التوصيل</span>
         </div>
         <div class="stepper-line" id="step-line-1"></div>
         <div class="step-node" id="step-node-2">
-          <div class="step-circle">2</div>
-          <span class="step-label" data-i18n="stepLabel2">الدفع</span>
-        </div>
-        <div class="stepper-line" id="step-line-2"></div>
-        <div class="step-node" id="step-node-3">
-          <div class="step-circle">3</div>
-          <span class="step-label" data-i18n="stepLabel3">المراجعة</span>
+          <div class="step-circle" style="color: #25D366; font-size: 1rem;">💬</div>
+          <span class="step-label" data-i18n="stepLabel2">تأكيد واتساب</span>
         </div>
       </div>
 
@@ -813,172 +808,51 @@
             <textarea class="form-control" id="checkout-notes" rows="2" data-i18n-placeholder="notesPlaceholder" placeholder="مثال: يرجى الاتصال قبل الوصول بساعة"></textarea>
           </div>
 
-        </div>
-      </div>
-
-      <!-- Step 1 Footer -->
-      <div class="modal-footer" id="checkout-step1-footer">
-        <button class="btn-primary" id="checkout-step1-next" style="width: 100%;" type="button" data-i18n="nextBtn">
-          المتابعة لاختيار طريقة الدفع
-        </button>
-      </div>
-
-      <!-- Step 2: Payment Method Selection -->
-      <div class="modal-body" id="checkout-step-2" style="display: none;">
-        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;" data-i18n="paymentHeading">
-          اختاري طريقة الدفع المفضلة
-        </h4>
-
-        <div class="payment-methods-grid">
-          
-          <!-- 1. Cash on Delivery (COD) -> ACTIVE & SELECTED -->
-          <label class="payment-card selected" for="pay-cod">
-            <input type="radio" class="payment-radio" id="pay-cod" name="payment-method" value="cod" checked />
+          <!-- Payment Method Card (COD Guaranteed) -->
+          <div class="payment-card selected" style="cursor: default; margin-top: 6px;">
             <div class="payment-card-body">
               <div class="payment-card-title-row">
-                <span class="payment-card-title" data-i18n="paymentCodTitle">الدفع عند الاستلام (COD)</span>
-                <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem;">مفعل ومتاح</span>
+                <span class="payment-card-title" data-i18n="paymentCodTitle">💵 الدفع عند الاستلام (COD)</span>
+                <span style="color: #1E7E34; background: #E8F8EE; font-weight: 700; font-size: 0.8rem; padding: 2px 8px; border-radius: var(--radius-pill);">
+                  مفعل ومتاح
+                </span>
               </div>
-              <p class="payment-card-desc" data-i18n="paymentCodDesc">
+              <p class="payment-card-desc" data-i18n="paymentCodDesc" style="margin-top: 4px;">
                 ادفعي نقداً لمندوب الشحن عند استلام الطلب ومعاينة القطع براحة وأمان.
               </p>
             </div>
-          </label>
-
-          <!-- 2. InstaPay -> DISABLED -->
-          <div class="payment-card disabled">
-            <input type="radio" class="payment-radio" id="pay-instapay" name="payment-method" value="instapay" disabled />
-            <div class="payment-card-body">
-              <div class="payment-card-title-row">
-                <span class="payment-card-title" data-i18n="paymentInstapayTitle">انستا باي (InstaPay)</span>
-                <span class="coming-soon-badge" data-i18n="comingSoonBadge">قريباً</span>
-              </div>
-              <p class="payment-card-desc">الدفع اللحظي عبر تطبيق انستا باي البنكي المصري.</p>
-            </div>
           </div>
 
-          <!-- 3. Vodafone Cash -> DISABLED -->
-          <div class="payment-card disabled">
-            <input type="radio" class="payment-radio" id="pay-voda" name="payment-method" value="vodafone_cash" disabled />
-            <div class="payment-card-body">
-              <div class="payment-card-title-row">
-                <span class="payment-card-title" data-i18n="paymentVodafoneTitle">فودافون كاش (Vodafone Cash)</span>
-                <span class="coming-soon-badge" data-i18n="comingSoonBadge">قريباً</span>
-              </div>
-              <p class="payment-card-desc">التحويل عبر المحافظ الإلكترونية للهواتف المحمولة في مصر.</p>
+          <!-- Live Inline Order Totals Summary -->
+          <div class="review-block" style="background-color: var(--bg-surface); margin-top: 8px; margin-bottom: 0;">
+            <div class="drawer-summary-row">
+              <span data-i18n="subtotal">إجمالي المنتجات:</span>
+              <span id="checkout-inline-subtotal">0 ج.م</span>
             </div>
-          </div>
-
-          <!-- 4. Credit / Debit Card -> DISABLED -->
-          <div class="payment-card disabled">
-            <input type="radio" class="payment-radio" id="pay-card" name="payment-method" value="card" disabled />
-            <div class="payment-card-body">
-              <div class="payment-card-title-row">
-                <span class="payment-card-title" data-i18n="paymentCardTitle">بطاقة بنكية (فيزا / ماستركارد)</span>
-                <span class="coming-soon-badge" data-i18n="comingSoonBadge">قريباً</span>
-              </div>
-              <p class="payment-card-desc">بوابة دفع إلكتروني آمنة بالبطاقات الائتمانية والخصم المباشر.</p>
+            <div class="drawer-summary-row">
+              <span data-i18n="shippingEstimate">الشحن:</span>
+              <span id="checkout-inline-shipping">حسب المحافظة</span>
+            </div>
+            <div class="drawer-summary-row total-row" style="margin-bottom: 0; padding-top: 8px;">
+              <span>الإجمالي النهائي المستحق:</span>
+              <span class="total-amount" id="checkout-inline-grandtotal">0 ج.م</span>
             </div>
           </div>
 
         </div>
       </div>
 
-      <!-- Step 2 Footer -->
-      <div class="modal-footer" id="checkout-step2-footer" style="display: none;">
-        <button class="btn-secondary" id="checkout-step2-back" style="flex: 1;" type="button" data-i18n="backBtn">السابق</button>
-        <button class="btn-primary" id="checkout-step2-next" style="flex: 1.5;" type="button" data-i18n="reviewOrderBtn">مراجعة الطلب</button>
-      </div>
-
-      <!-- Step 3: Review & WhatsApp Confirmation -->
-      <div class="modal-body" id="checkout-step-3" style="display: none;">
-        
-        <!-- Customer Info Review -->
-        <div class="review-block">
-          <div class="review-block-header">
-            <span class="review-block-title" data-i18n="customerDetailsSummary">بيانات التوصيل</span>
-            <button class="review-edit-link" id="review-edit-address" type="button" data-i18n="editStep">تعديل</button>
-          </div>
-          <div class="review-info-list">
-            <div class="review-info-row">
-              <span class="review-info-label" data-i18n="nameSummary">الاسم:</span>
-              <span class="review-info-val" id="review-name-val">-</span>
-            </div>
-            <div class="review-info-row">
-              <span class="review-info-label" data-i18n="phoneSummary">الموبايل:</span>
-              <span class="review-info-val" id="review-phone-val">-</span>
-            </div>
-            <div class="review-info-row">
-              <span class="review-info-label" data-i18n="governorateLabel">المحافظة:</span>
-              <span class="review-info-val" id="review-gov-val">-</span>
-            </div>
-            <div class="review-info-row">
-              <span class="review-info-label" data-i18n="addressSummary">العنوان:</span>
-              <span class="review-info-val" id="review-address-val">-</span>
-            </div>
-            <div class="review-info-row">
-              <span class="review-info-label" data-i18n="deliveryEstSummary">مدة التوصيل:</span>
-              <span class="review-info-val" id="review-delivery-val">-</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Payment Review -->
-        <div class="review-block">
-          <div class="review-block-header">
-            <span class="review-block-title" data-i18n="paymentSummary">طريقة الدفع</span>
-            <button class="review-edit-link" id="review-edit-payment" type="button" data-i18n="editStep">تعديل</button>
-          </div>
-          <div class="review-info-row">
-            <span class="review-info-val">💵 الدفع عند الاستلام (COD)</span>
-          </div>
-        </div>
-
-        <!-- Order Items Review -->
-        <div class="review-block">
-          <div class="review-block-header">
-            <span class="review-block-title" data-i18n="orderSummary">ملخص المنتجات</span>
-          </div>
-          <div class="review-items-list" id="review-items-container">
-            <!-- Dynamically populated items -->
-          </div>
-        </div>
-
-        <!-- Totals Review -->
-        <div class="review-block" style="background-color: var(--bg-surface);">
-          <div class="drawer-summary-row">
-            <span data-i18n="subtotal">إجمالي المنتجات:</span>
-            <span id="review-subtotal-val">0 ج.م</span>
-          </div>
-          <div class="drawer-summary-row">
-            <span data-i18n="shippingEstimate">الشحن:</span>
-            <span id="review-shipping-val">50 ج.م</span>
-          </div>
-          <div class="drawer-summary-row total-row">
-            <span>الإجمالي النهائي المستحق:</span>
-            <span class="total-amount" id="review-grandtotal-val">0 ج.م</span>
-          </div>
-        </div>
-
-        <!-- Direct WhatsApp Confirmation Button -->
-        <button class="btn-whatsapp-confirm" id="checkout-confirm-whatsapp-btn" type="button">
+      <!-- Step 1 Footer: Direct WhatsApp Submission -->
+      <div class="modal-footer" id="checkout-step1-footer" style="flex-direction: column; gap: 8px;">
+        <button class="btn-whatsapp-confirm" id="checkout-step1-next" style="width: 100%;" type="button">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.63c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/>
           </svg>
-          <span data-i18n="confirmWhatsappBtn">تأكيد الطلب عبر واتساب</span>
+          <span data-i18n="checkoutSubmitWhatsapp">إتمام الطلب وتأكيد عبر واتساب</span>
         </button>
-
-        <p class="whatsapp-redirect-notice" data-i18n="whatsappRedirectNotice">
+        <p class="whatsapp-redirect-notice" data-i18n="whatsappRedirectNotice" style="margin: 0; font-size: 0.82rem;">
           سيتم تحويلك مباشرة إلى محادثة واتساب مع لوميير لإرسال تفاصيل طلبك وتأكيده فوراً.
         </p>
-
-      </div>
-
-      <!-- Step 3 Footer (Back button) -->
-      <div class="modal-footer" id="checkout-step3-footer" style="display: none;">
-        <button class="btn-secondary" id="checkout-step3-back" style="width: 100%;" type="button" data-i18n="backBtn">
-          السابق
-        </button>
       </div>
 
       <!-- Order Success View (Shown after WhatsApp launch) -->
