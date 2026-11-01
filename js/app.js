@@ -1459,49 +1459,29 @@
     },
 
     renderCheckoutStep() {
-      const step = this.state.checkout.step;
       const step1View = document.getElementById("checkout-step-1");
-      const step2View = document.getElementById("checkout-step-2");
-      const step3View = document.getElementById("checkout-step-3");
+      const step1Footer = document.getElementById("checkout-step1-footer");
       const successView = document.getElementById("checkout-success-view");
 
-      if (step1View) step1View.style.display = "none";
-      if (step2View) step2View.style.display = "none";
-      if (step3View) step3View.style.display = "none";
+      if (step1View) step1View.style.display = "block";
+      if (step1Footer) step1Footer.style.display = "flex";
       if (successView) successView.style.display = "none";
 
-      const nodes = [
-        document.getElementById("step-node-1"),
-        document.getElementById("step-node-2"),
-        document.getElementById("step-node-3")
-      ];
-      const lines = [
-        document.getElementById("step-line-1"),
-        document.getElementById("step-line-2")
-      ];
-
-      nodes.forEach((node, idx) => {
-        if (!node) return;
-        const nodeStep = idx + 1;
-        node.classList.remove("active", "completed");
-        if (nodeStep === step) {
-          node.classList.add("active");
-        } else if (nodeStep < step) {
-          node.classList.add("completed");
-        }
-      });
-
-      lines.forEach((line, idx) => {
-        if (!line) return;
-        line.classList.toggle("completed", idx + 1 < step);
-      });
-
-      if (step === 1 && step1View) step1View.style.display = "block";
-      if (step === 2 && step2View) step2View.style.display = "block";
-      if (step === 3 && step3View) {
-        step3View.style.display = "block";
-        this.renderCheckoutReview();
+      const node1 = document.getElementById("step-node-1");
+      const node2 = document.getElementById("step-node-2");
+      const line1 = document.getElementById("step-line-1");
+      if (node1) {
+        node1.classList.add("active");
+        node1.classList.remove("completed");
       }
+      if (node2) {
+        node2.classList.remove("active", "completed");
+      }
+      if (line1) {
+        line1.classList.remove("completed");
+      }
+
+      this.updateLiveShippingDisplay();
     },
 
     setupCheckoutHandlers() {
@@ -1521,31 +1501,22 @@
         this.updateLiveShippingDisplay();
       });
 
-      document.getElementById("checkout-step1-next")?.addEventListener("click", () => {
-        if (this.validateStep1()) {
-          this.state.checkout.step = 2;
-          this.renderCheckoutStep();
+      // Submit Order and direct launch to WhatsApp
+      const handleDirectSubmit = () => {
+        if (!this.validateStep1()) {
+          const firstInvalid = document.querySelector("#checkout-step-1 .is-invalid");
+          if (firstInvalid) {
+            firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+            firstInvalid.focus();
+          }
+          this.showToast(this.state.lang === "ar" ? "يرجى استكمال البيانات المطلوبة باللون الأحمر" : "Please complete the required fields highlighted in red", "warning");
+          return;
         }
-      });
-
-      document.getElementById("checkout-step2-back")?.addEventListener("click", () => {
-        this.state.checkout.step = 1;
-        this.renderCheckoutStep();
-      });
-
-      document.getElementById("checkout-step2-next")?.addEventListener("click", () => {
-        this.state.checkout.step = 3;
-        this.renderCheckoutStep();
-      });
-
-      document.getElementById("checkout-step3-back")?.addEventListener("click", () => {
-        this.state.checkout.step = 2;
-        this.renderCheckoutStep();
-      });
-
-      document.getElementById("checkout-confirm-whatsapp-btn")?.addEventListener("click", () => {
         this.finalizeOrderAndLaunchWhatsApp();
-      });
+      };
+
+      document.getElementById("checkout-step1-next")?.addEventListener("click", handleDirectSubmit);
+      document.getElementById("checkout-confirm-whatsapp-btn")?.addEventListener("click", handleDirectSubmit);
 
       document.getElementById("success-open-whatsapp-again")?.addEventListener("click", () => {
         if (this.state.lastCreatedOrder) {
@@ -1567,23 +1538,40 @@
       const card = document.getElementById("checkout-shipping-calc-card");
       const priceEl = document.getElementById("checkout-shipping-calc-val");
       const daysEl = document.getElementById("checkout-shipping-calc-days");
-      if (!card || !priceEl) return;
 
       const subtotal = this.getCartSubtotal();
       const gov = this.state.checkout.governorate;
+      const isFree = subtotal >= STORE_CONFIG.freeShippingThreshold;
+      const fee = gov ? (isFree ? 0 : gov.fee) : 0;
+      const grandTotal = subtotal + fee;
 
-      if (!gov) {
-        card.style.display = "none";
-        return;
+      if (card && priceEl) {
+        if (!gov) {
+          card.style.display = "none";
+        } else {
+          card.style.display = "flex";
+          priceEl.textContent = isFree ? this.t("shippingFree") : this.formatCurrency(fee);
+          if (daysEl) {
+            daysEl.textContent = `${gov.deliveryDays} ${this.t("daysLabel")}`;
+          }
+        }
       }
 
-      card.style.display = "flex";
-      const isFree = subtotal >= STORE_CONFIG.freeShippingThreshold;
-      const fee = isFree ? 0 : gov.fee;
+      // Update inline summary numbers
+      const subtotalEl = document.getElementById("checkout-inline-subtotal");
+      const shippingEl = document.getElementById("checkout-inline-shipping");
+      const grandtotalEl = document.getElementById("checkout-inline-grandtotal");
 
-      priceEl.textContent = isFree ? this.t("shippingFree") : this.formatCurrency(fee);
-      if (daysEl) {
-        daysEl.textContent = `${gov.deliveryDays} ${this.t("daysLabel")}`;
+      if (subtotalEl) subtotalEl.textContent = this.formatCurrency(subtotal);
+      if (shippingEl) {
+        if (!gov) {
+          shippingEl.textContent = isFree ? this.t("shippingFree") : (this.state.lang === "ar" ? "حسب المحافظة" : "Select gov");
+        } else {
+          shippingEl.textContent = isFree ? this.t("shippingFree") : this.formatCurrency(fee);
+        }
+      }
+      if (grandtotalEl) {
+        grandtotalEl.textContent = this.formatCurrency(gov ? grandTotal : subtotal);
       }
     },
 
@@ -1860,12 +1848,14 @@
 
       window.open(whatsappUrl, "_blank");
 
-      const step3View = document.getElementById("checkout-step-3");
+      const step1View = document.getElementById("checkout-step-1");
+      const step1Footer = document.getElementById("checkout-step1-footer");
       const successView = document.getElementById("checkout-success-view");
       const refEl = document.getElementById("success-order-ref");
       const stepper = document.getElementById("checkout-stepper-bar");
 
-      if (step3View) step3View.style.display = "none";
+      if (step1View) step1View.style.display = "none";
+      if (step1Footer) step1Footer.style.display = "none";
       if (stepper) stepper.style.display = "none";
       if (successView) successView.style.display = "flex";
       if (refEl) refEl.textContent = orderRef;
